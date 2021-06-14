@@ -1,16 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Exercise1
+namespace ConsoleApplication1
 {
-    class Program
+    class Square
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var powers = new[] { 1, 2, 4,16,32,64,128,256,512,1024 };
-            foreach (var item in powers)
+
+            Console.Write("Enter a number =>");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if (a > 0 && a <= 10)
             {
-                Console.WriteLine(item);
+                for (int i = 0; i < 6; i++)
+                {
+                    a = a << 1;
+                    Console.Write("{0},", a);
+                }
             }
+            Console.ReadKey();
         }
     }
 }
